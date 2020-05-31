@@ -165,6 +165,14 @@ exports.config = {
      */
     before: function (capabilities, specs) {
         require('@babel/register');
+        expect = require('chai').expect;
+
+        browser.addCommand('getUrlAndTitle', () => {
+            return {
+                url: browser.getUrl(),
+                title: browser.getTitle()
+            };
+        });
     },
     /**
      * Runs before a WebdriverIO command gets executed.
