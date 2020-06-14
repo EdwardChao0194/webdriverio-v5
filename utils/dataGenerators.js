@@ -1,0 +1,10 @@
+module.exports = {
+    generateRandomEmailAddress: () => {
+        let emailAddress = "AutoFramework_" + Math.random().toString().replace('0.', '') + "@webdriveruni.com"
+        return emailAddress;
+    },
+
+    generateRandomString: () => {
+        return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+    }
+}
